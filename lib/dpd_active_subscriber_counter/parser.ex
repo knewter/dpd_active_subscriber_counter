@@ -20,7 +20,7 @@ defmodule DpdActiveSubscriberCounter.Parser do
   end
 
   defp get_subscribers(string) do
-    [headers|rest] = parse_csv(string)
+    [_headers|rest] = parse_csv(string)
     Enum.map(rest, fn(data) -> Subscriber.new(attributes_from_row(data)) end)
   end
 
