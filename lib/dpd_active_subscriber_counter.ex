@@ -6,4 +6,8 @@ defmodule DpdActiveSubscriberCounter do
   def start(_type, _args) do
     DpdActiveSubscriberCounter.Supervisor.start_link
   end
+
+  def parse(string) do
+    DpdActiveSubscriberCounter.Parser.parse(string)
+  end
 end
