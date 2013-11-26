@@ -22,6 +22,12 @@ Then run the app on that file...
 $ mix run bin/get_subscribers_count ~/Downloads/subscribers.csv 
 ```
 
+Or to use the API:
+
+```
+$ mix run bin/get_subscribers_count_from_client
+```
+
 ## Resources
 
 Pulled in a CSV parser from [here](https://github.com/jimm/elixir/tree/master/csv).

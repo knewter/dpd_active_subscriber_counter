@@ -10,7 +10,13 @@ defmodule DpdActiveSubscriberCounter.Mixfile do
 
   # Configuration for the OTP application
   def application do
-    [mod: { DpdActiveSubscriberCounter, [] }]
+    [
+      applications: [
+        :inets,
+        :hackney
+      ],
+      mod: { DpdActiveSubscriberCounter, [] }
+    ]
   end
 
   # Returns the list of dependencies in the format:
@@ -20,7 +26,8 @@ defmodule DpdActiveSubscriberCounter.Mixfile do
   # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
   defp deps do
     [
-      {:csvlixir, github: "jimm/csvlixir"}
+      {:csvlixir, github: "jimm/csvlixir"},
+      {:dpd_client, github: "knewter/dpd_client"}
     ]
   end
 end

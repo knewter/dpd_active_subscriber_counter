@@ -1,0 +1,6 @@
+storefront_id = System.get_env("GETDPD_STORE_ID")
+username = System.get_env("GETDPD_USERNAME")
+password = System.get_env("GETDPD_API_KEY")
+
+{:ok, active_subscribers} = DpdActiveSubscriberCounter.client(storefront_id, username, password)
+IO.puts "there are #{active_subscribers.total_count} active subscribers"

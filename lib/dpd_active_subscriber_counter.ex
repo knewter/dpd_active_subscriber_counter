@@ -10,4 +10,8 @@ defmodule DpdActiveSubscriberCounter do
   def parse(string) do
     DpdActiveSubscriberCounter.Parser.parse(string)
   end
+
+  def client(storefront_id, username, password) do
+    DpdActiveSubscriberCounter.Client.get_active_subscribers(storefront_id, username, password)
+  end
 end
