@@ -16,7 +16,8 @@ ID, Plan, Terms, Total Payments, Start Date, Next Invoice, First Name, Last Name
   end
 
   test "generates an ActiveSubscribers record", meta do
-    assert meta[:active_subscribers].total_count == 3
+    # The FreeSubscriber doesn't count as active
+    assert meta[:active_subscribers].total_count == 2
   end
 
   test "extracts the data for each subscriber", meta do

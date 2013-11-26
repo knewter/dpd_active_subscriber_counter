@@ -4,11 +4,19 @@ defmodule DpdActiveSubscriberCounter.Parser do
       Enum.count(record.subscribers)
     end
   end
-  defrecord Subscriber, first_name: "", last_name: "", terms: "", next_invoice: "", email: ""
+  defrecord Subscriber, first_name: "", last_name: "", terms: "", next_invoice: "", email: "" do
+    def active?(record) do
+      record.next_invoice != ""
+    end
+  end
 
   def parse(string) do
-    active_subscribers_record = ActiveSubscribers.new(subscribers: get_subscribers(string))
+    active_subscribers_record = ActiveSubscribers.new(subscribers: get_active_subscribers(string))
     {:ok, active_subscribers_record}
+  end
+
+  defp get_active_subscribers(string) do
+    get_subscribers(string) |> Enum.filter(fn(x) -> x.active? end)
   end
 
   defp get_subscribers(string) do
