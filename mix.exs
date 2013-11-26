@@ -19,6 +19,8 @@ defmodule DpdActiveSubscriberCounter.Mixfile do
   # To specify particular versions, regardless of the tag, do:
   # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
   defp deps do
-    []
+    [
+      {:csvlixir, github: "jimm/csvlixir"}
+    ]
   end
 end
