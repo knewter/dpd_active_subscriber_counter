@@ -18,6 +18,10 @@ Save that file as `subscribers.csv`
 
 Then run the app on that file...
 
+```
+$ mix run bin/get_subscribers_count ~/Downloads/subscribers.csv 
+```
+
 ## Resources
 
 Pulled in a CSV parser from [here](https://github.com/jimm/elixir/tree/master/csv).
