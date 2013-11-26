@@ -25,7 +25,7 @@ defmodule DpdActiveSubscriberCounter.Parser do
   end
 
   defp parse_csv(string) do
-    strip_empty_last_line(string) |> CSV.read
+    strip_empty_last_line(string) |> CSVLixir.read
   end
 
   defp strip_empty_last_line(string) do
