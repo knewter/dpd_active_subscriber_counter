@@ -1,0 +1,6 @@
+#!/usr/local/bin/elixir -pa ../_build/shared/lib/dpd_active_subscriber_counter/ebin
+
+[filename|_rest] = System.argv
+file_contents = File.read!(filename)
+{:ok, active_subscribers} = DpdActiveSubscriberCounter.parse(file_contents)
+IO.puts "there are #{active_subscribers.total_count} active subscribers"
