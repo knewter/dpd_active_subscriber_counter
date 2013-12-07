@@ -5,6 +5,18 @@ defmodule DpdActiveSubscriberCounter.Client do
     def total_count(record) do
       Enum.count(record.subscribers)
     end
+
+    def monthly_revenue(record) do
+      record.total_count * subscription_cost
+    end
+
+    def yearly_revenue(record) do
+      record.monthly_revenue * 12
+    end
+
+    defp subscription_cost do
+      9
+    end
   end
   defrecord Subscriber, first_name: "", last_name: "", terms: "", next_invoice: "", email: "", status: "inactive", trial: true do
     def active?(record) do
