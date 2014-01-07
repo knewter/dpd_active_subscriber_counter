@@ -1,0 +1,11 @@
+storefront_id = System.get_env("GETDPD_STORE_ID")
+username = System.get_env("GETDPD_USERNAME")
+password = System.get_env("GETDPD_API_KEY")
+
+{:ok, active_subscribers} = DpdActiveSubscriberCounter.client(storefront_id, username, password)
+active = "active subscribers: #{active_subscribers.total_count}"
+
+filename = "/home/jadams/Dropbox/Public/glass/#{active}"
+
+File.rm filename
+File.write(filename, filename)
