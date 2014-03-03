@@ -7,10 +7,6 @@ defmodule DpdActiveSubscriberCounter do
     DpdActiveSubscriberCounter.Supervisor.start_link
   end
 
-  def parse(string) do
-    DpdActiveSubscriberCounter.Parser.parse(string)
-  end
-
   def client(storefront_id, username, password) do
     DpdActiveSubscriberCounter.Client.get_active_subscribers(storefront_id, username, password)
   end

@@ -1,6 +1,6 @@
 [ "csvlixir": {:git, "git://github.com/jimm/csvlixir.git", "419d86f3a9956b5bcb890ca7a75a9c5219317725", []},
   "dpd_client": {:git, "git://github.com/knewter/dpd_client.git", "6a0e6dd73651807188a19a93bc75dc0df39ee20a", []},
-  "hackney": {:git, "git://github.com/benoitc/hackney.git", "12b267d82684da8199325fcd95ad685e7db7abc4", []},
-  "hackney_lib": {:git, "https://github.com/benoitc/hackney_lib.git", "eecdb481f1d38bfb194896bffdf9bdcdd967ae96", [{:tag, "0.2.2"}]},
-  "jazz": {:git, "git://github.com/meh/jazz.git", "4756dda14295116dd5a790ea3030b5c3b1181859", []},
-  "mimetypes": {:git, "git://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [{:ref, "master"}]} ]
+  "hackney": {:git, "git://github.com/benoitc/hackney.git", "ee982af5a15b58714761988630105dd92ebbbcab", []},
+  "hackney_lib": {:git, "https://github.com/benoitc/hackney_lib.git", "eecdb481f1d38bfb194896bffdf9bdcdd967ae96", [tag: "0.2.2"]},
+  "jazz": {:git, "git://github.com/meh/jazz.git", "c502fc3894249d677f0546bc02a9b866d5d32afa", []},
+  "mimetypes": {:git, "git://github.com/spawngrid/mimetypes.git", "47d37a977a7d633199822bf6b08353007483d00f", [ref: "master"]} ]
