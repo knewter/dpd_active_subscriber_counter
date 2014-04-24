@@ -25,7 +25,7 @@ $ mix run bin/get_subscribers_count ~/Downloads/subscribers.csv
 Or to use the API:
 
 ```
-$ mix run bin/get_subscribers_count_from_client
+$ mix run bin/get_subscribers_count_from_client.exs
 ```
 
 ## Resources

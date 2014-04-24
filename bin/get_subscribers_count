@@ -1,4 +1,0 @@
-[filename|_rest] = System.argv
-file_contents = File.read!(filename)
-{:ok, active_subscribers} = DpdActiveSubscriberCounter.parse(file_contents)
-IO.puts "there are #{active_subscribers.total_count} active subscribers"
