@@ -25,7 +25,8 @@ defmodule DpdActiveSubscriberCounter.Mixfile do
   # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
   defp deps do
     [
-      {:dpd_client, github: "knewter/dpd_client"}
+      {:dpd_client, "~> 0.0.4"},
+      {:hackney, github: "benoitc/hackney"}
     ]
   end
 end
